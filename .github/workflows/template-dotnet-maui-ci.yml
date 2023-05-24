@@ -24,18 +24,18 @@ jobs:
           echo "${{inputs.hd_num}}"
           echo "${{ inputs.hd_num }}"
 
-      # - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-      # - name: Show Files
-      #   run: |
-      #     pwd
-      #     ls
+      - name: Show Files
+        run: |
+          pwd
+          ls
 
-      # - name: Setup .NET
-      #   uses: actions/setup-dotnet@v2
-      #   with:
-      #     dotnet-version: 7.0.x
-      #     include-prerelease: true
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 7.0.x
+          include-prerelease: true
 
       # - name: Install MAUI Workloads
       #   run: |
