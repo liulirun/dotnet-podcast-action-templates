@@ -1,0 +1,30 @@
+on:
+  workflow_call:
+    inputs:
+      csproj:
+        required: true
+        type: string
+      hd_num:
+        required: true
+        type: string
+
+jobs:
+  build-mobile:
+    runs-on: windows-latest
+
+    steps:
+      - name: Echo env
+        shell: pwsh
+        run: |
+          echo "${{inputs.csproj}}"
+          echo "${{ inputs.csproj }}"
+          echo "----------------"
+          echo "${{inputs.hd_num}}"
+          echo "${{ inputs.hd_num }}"
+      
+      - name: Echo env 3
+        shell: pwsh
+        env:
+          HD_NUM: ${{inputs.hd_num}}
+        run: |
+          echo $HD_NUM
