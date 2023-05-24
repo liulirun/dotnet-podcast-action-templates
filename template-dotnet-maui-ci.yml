@@ -16,15 +16,9 @@ jobs:
       - name: Echo env
         shell: pwsh
         run: |
+          echo "this is from called action root folder"
           echo "${{inputs.csproj}}"
           echo "${{ inputs.csproj }}"
           echo "----------------"
           echo "${{inputs.hd_num}}"
           echo "${{ inputs.hd_num }}"
-      
-      - name: Echo env 3
-        shell: pwsh
-        env:
-          HD_NUM: ${{inputs.hd_num}}
-        run: |
-          echo $HD_NUM
