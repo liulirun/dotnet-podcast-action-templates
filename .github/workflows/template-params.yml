@@ -8,7 +8,7 @@ on:
       hd_num:
         required: true
         type: string
-      manual_param1:
+      manual_param_1:
         required: true
         type: string
 
@@ -20,8 +20,8 @@ jobs:
       - name: Echo env
         shell: pwsh
         run: |
-          echo "${{ inputs.manual_param1 }}"
+          echo "${{ inputs.manual_param_1 }}"
           echo "${{ inputs.hd_num }}"
           echo "-----------------below are test-------------"          
-          echo "${{ github.event.inputs.manual_param1 }}"
+          echo "${{ github.event.inputs.manual_param_1 }}"
           
