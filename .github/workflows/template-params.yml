@@ -1,7 +1,3 @@
-# pass in params/input - tbd
-# pass out params/input - tbd
-# print env - tbd
-# print inputs - tbd
 on:
   workflow_call:
     inputs:
@@ -24,4 +20,5 @@ jobs:
           echo "${{ inputs.hd_num }}"
           echo "${{ github.event.inputs.manual_param_1 }}"
           echo "-----------------below are test-------------"
+          echo "${{ env.mascot }}"
           
