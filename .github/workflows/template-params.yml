@@ -1,5 +1,7 @@
-#pass in params/input
-#pass out params/input
+# pass in params/input - tbd
+# pass out params/input - tbd
+# print env - tbd
+# print inputs - tbd
 on:
   workflow_call:
     inputs:
@@ -7,6 +9,9 @@ on:
         required: true
         type: string
       hd_num:
+        required: true
+        type: string
+      param1:
         required: true
         type: string
 
@@ -18,10 +23,9 @@ jobs:
       - name: Echo env
         shell: pwsh
         run: |
-          echo "this is from called action workflow folder"
-          pwd
-          echo "${{inputs.csproj}}"
+          echo "${{ inputs.param1 }}"
           echo "${{ inputs.csproj }}"
-          echo "----------------"
-          echo "${{inputs.hd_num}}"
           echo "${{ inputs.hd_num }}"
+          echo "-----------------below are test-------------"          
+          echo "${{ github.event.inputs.param1 }}"
+          
