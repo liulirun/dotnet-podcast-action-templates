@@ -5,13 +5,10 @@
 on:
   workflow_call:
     inputs:
-      csproj:
-        required: true
-        type: string
       hd_num:
         required: true
         type: string
-      param1:
+      manual_param1:
         required: true
         type: string
 
@@ -23,9 +20,8 @@ jobs:
       - name: Echo env
         shell: pwsh
         run: |
-          echo "${{ inputs.param1 }}"
-          echo "${{ inputs.csproj }}"
+          echo "${{ inputs.manual_param1 }}"
           echo "${{ inputs.hd_num }}"
           echo "-----------------below are test-------------"          
-          echo "${{ github.event.inputs.param1 }}"
+          echo "${{ github.event.inputs.manual_param1 }}"
           
