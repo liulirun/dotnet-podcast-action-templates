@@ -25,10 +25,3 @@ jobs:
           echo "----------------"
           echo "${{inputs.hd_num}}"
           echo "${{ inputs.hd_num }}"
-
-      - uses: actions/checkout@v3
-
-      - name: Show Files
-        run: |
-          pwd
-          ls
