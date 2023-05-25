@@ -22,6 +22,6 @@ jobs:
         run: |
           echo "${{ inputs.manual_param_1 }}"
           echo "${{ inputs.hd_num }}"
-          echo "-----------------below are test-------------"          
           echo "${{ github.event.inputs.manual_param_1 }}"
+          echo "-----------------below are test-------------"
           
